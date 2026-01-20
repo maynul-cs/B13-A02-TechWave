@@ -133,3 +133,104 @@ header {
 
 .stat-item h3 { font-size: 38px; color: #00ffaa; }
 .stat-item p { font-size: 12px; color: #777; letter-spacing: 1px; }
+
+
+/* Features (Why Choose) */
+.features { padding: 80px 8%; }
+
+.features-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: #1a0b35;
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid #2a1b45;
+}
+
+.feature-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.icon-box { font-size: 32px; margin-bottom: 20px; }
+
+
+/* Features Section Layout */
+.features {
+    padding: 80px 8%;
+    background-color: #0f0524;
+    color: white;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    grid-template-areas: 
+        "premium mobile mobile"
+        "premium global global"
+        "interviews interviews resources";
+}
+
+.feature-card {
+    background: #1d103d;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.icon-box img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #b3b3b3;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Grid Areas Assigning */
+.premium { grid-area: premium; }
+
+.mobile { 
+    grid-area: mobile; 
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.global { 
+    grid-area: global; 
+    flex-direction: row; 
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.interviews { grid-area: interviews; }
+.resources { grid-area: resources; }
+
