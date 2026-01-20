@@ -234,3 +234,72 @@ header {
 .interviews { grid-area: interviews; }
 .resources { grid-area: resources; }
 
+
+
+/* --- Featured Episodes --- */
+.episodes {
+    padding: 100px 8%;
+    background-color: #0f0524;
+    text-align: center;
+}
+.episodes h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.episode-card {
+    background: #1a0b35;
+    border-radius: 25px;
+    overflow: hidden;
+    text-align: left;
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.ep-content {
+    padding: 25px;
+}
+
+.ep-content h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.ep-content p {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+}
+
+.ep-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #00ff88;
+    font-weight: 600;
+}
