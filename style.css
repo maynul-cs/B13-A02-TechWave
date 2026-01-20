@@ -437,8 +437,8 @@ header {
     transform: scale(1.1);
 }
 
-/* --- Footer --- */
 
+/* --- Footer --- */
 .footer {
     background-image: url(./assets/footer-bg.png);
     margin-top: 50px;
@@ -515,4 +515,96 @@ header {
 
 .footer-wave-bg img {
     width: 100%;
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Desktop (above 992px) - Added Hamburger menu */
+@media (min-width: 993px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+/* Medium Devices (576px to 992px) */
+@media (max-width: 992px) {
+    .navbar { padding: 15px 5%; }
+    
+    /* menu hide for custom toggle */
+    .nav-links, .btn-subscribe-top {
+        display: none; 
+    }
+
+    .menu-icon {
+        display: block;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    /* Hero Section adjustment */
+    .banner { height: 600px; }
+    .hero-circle { width: 300px; height: 300px; }
+    .microphone { width: 100px; }
+
+    /* Stats Grid: for transfer 2nd column into */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Why Choose Section:1 column */
+    .features-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: none; 
+    }
+    
+    .feature-card { grid-area: auto !important; }
+    .mobile, .global { flex-direction: column; }
+
+    /* Episode Grid:2 column */
+    .episode-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Host Card: column wise */
+    .host-card {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 30px;
+    }
+    .social-links { justify-content: center; }
+}
+
+/* Small Devices (Up to 576px) */
+@media (max-width: 576px) {
+    .logo { font-size: 24px; }
+    
+    /* Banner/Hero Text */
+    .hero-text h1 { font-size: 32px; }
+    .hero-text p { font-size: 14px; }
+    .banner-buttons { flex-direction: column; align-items: center; }
+
+    /* Stats Grid:1st column */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Episode Grid:1st column */
+    .episode-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer: navigation up-down */
+    .footer-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer { height: auto; padding-bottom: 40px; }
+    
+    .host-image img {
+        width: 150px;
+        height: 150px;
+    }
 }
