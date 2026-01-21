@@ -78,7 +78,6 @@ header {
 }
 
 /* --- HERO/BANNER SECTION --- */
-
 .banner {
     position: relative;
     width: 100%;
@@ -328,8 +327,7 @@ header {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
+    padding-bottom: 56.25%; 
     overflow: hidden;
     max-width: 100%;
     background: #000;
@@ -517,94 +515,101 @@ header {
     width: 100%;
 }
 
+
+
 /* --- RESPONSIVE BREAKPOINTS --- */
-
-/* Desktop (above 992px) - Added Hamburger menu */
+/* Large Device (above 992px) */
 @media (min-width: 993px) {
-    .menu-icon {
-        display: none;
-    }
+    .menu-icon { display: none; }
 }
 
-/* Medium Devices (576px to 992px) */
-@media (max-width: 992px) {
-    .navbar { padding: 15px 5%; }
-    
-    /* menu hide for custom toggle */
-    .nav-links, .btn-subscribe-top {
-        display: none; 
-    }
 
-    .menu-icon {
-        display: block;
-        width: 30px;
-        cursor: pointer;
-    }
-
-    /* Hero Section adjustment */
-    .banner { height: 600px; }
-    .hero-circle { width: 300px; height: 300px; }
-    .microphone { width: 100px; }
-
-    /* Stats Grid: for transfer 2nd column into */
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    /* Why Choose Section:1 column */
-    .features-container {
-        grid-template-columns: 1fr;
-        grid-template-areas: none; 
-    }
-    
-    .feature-card { grid-area: auto !important; }
-    .mobile, .global { flex-direction: column; }
-
-    /* Episode Grid:2 column */
-    .episode-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Host Card: column wise */
-    .host-card {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-        padding: 30px;
-    }
-    .social-links { justify-content: center; }
-}
-
-/* Small Devices (Up to 576px) */
+/* Small Device (up to 576px) */
 @media (max-width: 576px) {
-    .logo { font-size: 24px; }
+    .nav-links, .btn-subscribe-top { display: none; }
+    .menu-icon { display: block; }
+    .navbar { padding: 15px 5%; }
+
     
-    /* Banner/Hero Text */
-    .hero-text h1 { font-size: 32px; }
-    .hero-text p { font-size: 14px; }
-    .banner-buttons { flex-direction: column; align-items: center; }
-
-    /* Stats Grid:1st column */
-    .stats-grid {
-        grid-template-columns: 1fr;
+    .banner {
+        height: auto;
+        padding: 40px 15px;
+        background-position: center;
+    }
+    .banner-text {
+        position: relative;
+        top: 0; left: 0; transform: none;
+        padding-top: 0; 
     }
 
-    /* Episode Grid:1st column */
-    .episode-grid {
-        grid-template-columns: 1fr;
+    
+    .banner-text > div:first-child {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .hero-circle { width: 100%; height: 100%; position: relative; }
+    .microphone {
+        width: 80px;
+        height: auto;
+        position: absolute;
+        top: 52%; left: 45%;
+        transform: translate(-50%, -50%);
+    }
+    .badge-new { top: -15px; right: -85px; left: auto; font-size: 12px; }
+
+    
+    .hero-text { margin-top: 20px; }
+    .hero-text h1 { font-size: 30px; margin-bottom: 10px; }
+    .banner-buttons { flex-direction: column; width: 100%; align-items: center; }
+    .btn-spotify, .btn-subscribe { width: 100%; max-width: 280px; }
+
+    
+    .stats-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 20px 0;
     }
 
-    /* Footer: navigation up-down */
-    .footer-nav {
+    
+    .features-container {
+        display: flex;
         flex-direction: column;
         gap: 15px;
     }
-    
-    .footer { height: auto; padding-bottom: 40px; }
-    
-    .host-image img {
-        width: 150px;
-        height: 150px;
+    .feature-card {
+        padding: 20px;
+        flex-direction: column !important;
     }
+    .feature-card.mobile, .feature-card.global { align-items: flex-start; }
+
+    
+    .episode-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    
+    .host-card {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 15px;
+        text-align: center;
+    }
+    .host-image img { width: 120px; height: 120px; margin: 0 auto 15px; }
+    .social-links { justify-content: center; }
+
+    /* footer */
+    .footer { 
+        height: auto;
+        padding: 40px 5%;
+    }
+    .footer-logo { font-size: 32px; }
+    .footer-nav { 
+        flex-direction: column; 
+        gap: 15px; 
+        align-items: center; 
+    }
+    
 }
